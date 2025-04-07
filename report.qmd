@@ -1,0 +1,70 @@
+---
+title: "Line Table"
+format:
+  html:
+    self-contained: false  # <— allow external JS like Bokeh
+    embed-resources: false
+jupyter: python3
+execute:
+  enabled: true
+
+
+---
+```{python}
+import panel as pn
+import pandas as pd
+
+pn.extension("tabulator")
+
+# Load and rename
+dfF = pd.read_csv("/Users/arunramji/desktop/WaterlooLineData/ForwardLinesClean.csv")
+
+rename_dict = {
+    "time_up_3": "Time Spent up 3",
+    "time_up_2": "Time Spent up 2",
+    "time_up_1": "Time Spent up 1",
+    "time_tied": "Time spent tied",
+    "time_down_1": "Time Spent down 1",
+    "time_down_2": "Time Spent down 2",
+    "time_down_3": "Time Spent down 3",
+    "total_duration": "Total TOI",
+    "total_dz_start": "DZ Starts",
+    "total_oz_start": "OZ Starts",
+    "total_shots_for_per60": "Shot Att For/60",
+    "total_shots_against_per60": "Shot Att Against/60",
+    "total_goals_for_per60": "GF/60",
+    "total_goals_against_per60": "GA/60",
+    "ShotAtt%": "Shot Att%",
+    "GF%": "GF%",
+    "SC%": "Scoring Chance%"
+}
+dfF.rename(columns=rename_dict, inplace=True)
+
+# Select key columns
+priority_cols = [
+    "F1", "F2", "F3",
+    "Total TOI",
+    "Shot Att%",
+    "GF%",
+    "Scoring Chance%",
+    "GF/60",
+    "GA/60",
+    "Shot Att For/60",
+    "Shot Att Against/60"
+]
+dfF = dfF[priority_cols]
+
+# Show as Tabulator table (sortable/searchable by default)
+pn.panel(
+    pn.widgets.Tabulator(dfF, show_index=False, pagination='local', page_size=10)
+)
+```
+
+
+
+
+
+
+
+
+
