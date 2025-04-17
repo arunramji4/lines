@@ -136,88 +136,40 @@ dfD_use = dfD[useagecolsD]
 # Use .panel() to ensure rendering in Quarto
 
 # Display everything with frozen columns
+
+# Final layout
 pn.panel(
     pn.Column(
         pn.pane.Markdown("## Forward Line Stats"),
-        pn.Tabulator(
+        pn.widgets.Tabulator(
             dfF_stats,
             show_index=False,
-            columns=[
-                {"field": "F1", "frozen": True},
-                {"field": "F2", "frozen": True},
-                {"field": "F3", "frozen": True},
-                {"field": "Total TOI (Min)"},
-                {"field": "Shot Att%"},
-                {"field": "GF%"},
-                {"field": "Scoring Chance%"},
-                {"field": "GF/60"},
-                {"field": "GA/60"},
-                {"field": "Shot Att For/60"},
-                {"field": "Shot Att Against/60"}
-            ],
-            sizing_mode="stretch_width"
+            sizing_mode="stretch_width",
+            frozen_columns=['F1', 'F2', 'F3']
         ),
 
         pn.pane.Markdown("## Forward Line Usage"),
-        pn.Tabulator(
+        pn.widgets.Tabulator(
             dfF_use,
             show_index=False,
-            columns=[
-                {"field": "F1", "frozen": True},
-                {"field": "F2", "frozen": True},
-                {"field": "F3", "frozen": True},
-                {"field": "Time Spent up 3"},
-                {"field": "Time Spent up 2"},
-                {"field": "Time Spent up 1"},
-                {"field": "Time spent tied"},
-                {"field": "Time Spent down 1"},
-                {"field": "Time Spent down 2"},
-                {"field": "Time Spent down 3"},
-                {"field": "Total TOI (Min)"},
-                {"field": "DZ Starts"},
-                {"field": "OZ Starts"}
-            ],
-            sizing_mode="stretch_width"
+            sizing_mode="stretch_width",
+            frozen_columns=['F1', 'F2', 'F3']
         ),
 
         pn.pane.Markdown("## D-Pair Stats"),
-        pn.Tabulator(
+        pn.widgets.Tabulator(
             dfD_stats,
             show_index=False,
-            columns=[
-                {"field": "D1", "frozen": True},
-                {"field": "D2", "frozen": True},
-                {"field": "Total TOI (Min)"},
-                {"field": "Shot Att%"},
-                {"field": "GF%"},
-                {"field": "Scoring Chance%"},
-                {"field": "GF/60"},
-                {"field": "GA/60"},
-                {"field": "Shot Att For/60"},
-                {"field": "Shot Att Against/60"}
-            ],
-            sizing_mode="stretch_width"
+            sizing_mode="stretch_width",
+            frozen_columns=['D1', 'D2']
         ),
 
         pn.pane.Markdown("## D-Pair Usage"),
-        pn.Tabulator(
+        pn.widgets.Tabulator(
             dfD_use,
             show_index=False,
-            columns=[
-                {"field": "D1", "frozen": True},
-                {"field": "D2", "frozen": True},
-                {"field": "Time Spent up 3"},
-                {"field": "Time Spent up 2"},
-                {"field": "Time Spent up 1"},
-                {"field": "Time spent tied"},
-                {"field": "Time Spent down 1"},
-                {"field": "Time Spent down 2"},
-                {"field": "Time Spent down 3"},
-                {"field": "Total TOI (Min)"},
-                {"field": "DZ Starts"},
-                {"field": "OZ Starts"}
-            ],
-            sizing_mode="stretch_width"
+            sizing_mode="stretch_width",
+            frozen_columns=['D1', 'D2']
         )
     )
 ).servable()
