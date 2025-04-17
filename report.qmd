@@ -68,6 +68,8 @@ dfF.rename(columns=rename_dict, inplace=True)
 dfD.rename(columns=rename_dictD, inplace=True)
 dfF.to_csv("ForwardLinesClean.csv", index=False)
 dfD.to_csv("DpairsClean.csv", index=False)
+dfF = pd.read_csv("ForwardLinesClean.csv")
+dfD = pd.read_csv("DpairsClean.csv")
 
 # Select key columns
 priority_colsF = [
