@@ -1,0 +1,12 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Line Tables"
+  navbar: false
+
+format:
+  html:
+    self-contained: false
+    embed-resources: false

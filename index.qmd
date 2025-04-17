@@ -19,8 +19,9 @@ import pandas as pd
 pn.extension("tabulator")
 
 # Load and rename
-dfF = pd.read_csv("ForwardLinesClean.csv")
-dfD = pd.read_csv("DpairsClean.csv")
+dfF = pd.read_csv("/Users/arunramji/desktop/WaterlooLineData/ForwardLinesClean.csv")
+
+dfD = pd.read_csv("/Users/arunramji/desktop/WaterlooLineData/DpairsClean.csv")
 
 
 
@@ -32,7 +33,7 @@ rename_dict = {
     "time_down_1": "Time Spent down 1",
     "time_down_2": "Time Spent down 2",
     "time_down_3": "Time Spent down 3",
-    "total_duration": "Total TOI (Min)",
+    "total_duration": "Total TOI",
     "total_dz_start": "DZ Starts",
     "total_oz_start": "OZ Starts",
     "total_shots_for_per60": "Shot Att For/60",
@@ -52,7 +53,7 @@ rename_dictD = {
     "time_down_1": "Time Spent down 1",
     "time_down_2": "Time Spent down 2",
     "time_down_3": "Time Spent down 3",
-    "total_duration": "Total TOI (Min)",
+    "total_duration": "Total TOI",
     "total_dz_start": "DZ Starts",
     "total_oz_start": "OZ Starts",
     "total_shots_for_per60": "Shot Att For/60",
@@ -66,12 +67,12 @@ rename_dictD = {
 
 dfF.rename(columns=rename_dict, inplace=True)
 dfD.rename(columns=rename_dictD, inplace=True)
-
+print(dfD.columns.tolist())  # Make sure the new names are there
 
 # Select key columns
 priority_colsF = [
     "F1", "F2", "F3",
-    "Total TOI (Min)",
+    "Total TOI",
     "Shot Att%",
     "GF%",
     "Scoring Chance%",
@@ -93,14 +94,14 @@ useagecolsF = [
     "Time Spent down 1",
     "Time Spent down 2",
     "Time Spent down 3",
-    "Total TOI (Min)",
+    "Total TOI",
     "DZ Starts",
     "OZ Starts"
 ]
 
 priority_colsD = [
     "D1","D2",
-    "Total TOI (Min)",
+    "Total TOI",
     "Shot Att%",
     "GF%",
     "Scoring Chance%",
@@ -119,7 +120,7 @@ useagecolsD = [
     "Time Spent down 1",
     "Time Spent down 2",
     "Time Spent down 3",
-    "Total TOI (Min)",
+    "Total TOI",
     "DZ Starts",
     "OZ Starts"
 ]
@@ -150,6 +151,12 @@ pn.panel(
         pn.widgets.Tabulator(dfD_use, show_index=False)
     )
 ).servable()
+
+
+
+
+
+
 
 ```
 
