@@ -66,7 +66,8 @@ rename_dictD = {
 
 dfF.rename(columns=rename_dict, inplace=True)
 dfD.rename(columns=rename_dictD, inplace=True)
-
+dfF.to_csv("ForwardLinesClean.csv", index=False)
+dfD.to_csv("DpairsClean.csv", index=False)
 
 # Select key columns
 priority_colsF = [

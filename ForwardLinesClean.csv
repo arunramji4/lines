@@ -1,4 +1,4 @@
-F1,F2,F3,time_up_3,time_up_2,time_up_1,time_tied,time_down_1,time_down_2,time_down_3,total_duration,total_dz_start,total_oz_start,total_shots_for,total_shots_against,total_goals_for,total_goals_against,total_shots_for_per60,total_shots_against_per60,total_goals_for_per60,total_goals_against_per60,ShotAtt%,GF%,SCF,SCA,SC%
+F1,F2,F3,Time Spent up 3,Time Spent up 2,Time Spent up 1,Time spent tied,Time Spent down 1,Time Spent down 2,Time Spent down 3,Total TOI (Min),DZ Starts,OZ Starts,total_shots_for,total_shots_against,total_goals_for,total_goals_against,Shot Att For/60,Shot Att Against/60,GF/60,GA/60,Shot Att%,GF%,SCF,SCA,Scoring Chance%
 Goldie Jaden,Phibbs Jack,Popple Tate,6.4,11.7,22.1,58.9,24.4,1.8,0.0,134.0,51,47,91,148,2,3,40.7,66.3,0.9,1.3,38.1,40.0,11.0,15.0,42.3
 Fishman Jesse,Fraser Cole,Murray Jaxson,5.5,6.9,12.9,43.4,12.8,3.8,2.6,93.8,53,28,72,95,5,4,46.1,60.8,3.2,2.6,43.1,55.6,16.0,12.0,57.1
 Bowie Brendan,Fedak Liam,Santia Adamo,3.7,7.4,14.0,35.1,9.8,0.0,0.0,73.1,42,32,60,79,1,3,49.3,64.9,0.8,2.5,43.2,25.0,9.0,13.0,40.9

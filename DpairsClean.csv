@@ -1,4 +1,4 @@
-D1,D2,time_up_3,time_up_2,time_up_1,time_tied,time_down_1,time_down_2,time_down_3,total_duration,total_dz_start,total_oz_start,total_shots_for,total_shots_against,total_goals_for,total_goals_against,total_shots_for_per60,total_shots_against_per60,total_goals_for_per60,total_goals_against_per60,ShotAtt%,GF%,SCF,SCA,Unnamed: 4,SC%
+D1,D2,Time Spent up 3,Time Spent up 2,Time Spent up 1,Time spent tied,Time Spent down 1,Time Spent down 2,Time Spent down 3,Total TOI (Min),DZ Starts,OZ Starts,total_shots_for,total_shots_against,total_goals_for,total_goals_against,Shot Att For/60,Shot Att Against/60,GF/60,GA/60,Shot Att%,GF%,SCF,SCA,Unnamed: 4,Scoring Chance%
 Bays Brendan,McKinney Sam,8.1,21.3,49.9,172.0,56.3,15.6,6.7,338.7,127,135,288,322,12,10,51.0,57.0,2.1,1.8,47.2,54.5,29.0,28.0,0.0,50.9
 Hendry Jordan,Ruscheinski Kieran,4.9,15.6,20.8,84.0,35.2,11.4,1.6,182.8,81,46,116,205,6,8,38.1,67.3,2.0,2.6,36.1,42.9,0.0,0.0,0.0,
 Ruscheinski Kieran,Wilson Owen,1.9,4.8,16.8,42.7,10.9,0.9,0.7,82.0,50,19,68,88,6,0,49.7,64.4,4.4,0.0,43.6,100.0,0.0,0.0,0.0,
