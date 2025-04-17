@@ -137,19 +137,21 @@ dfD_use = dfD[useagecolsD]
 
 pn.panel(
     pn.Column(
-        "## Forward Line Stats",
+        pn.pane.Markdown("## Forward Line Stats"),
         pn.widgets.Tabulator(dfF_stats, show_index=False),
 
-        "## Forward Line Usage",
+        pn.pane.Markdown("## Forward Line Usage"),
         pn.widgets.Tabulator(dfF_use, show_index=False),
 
-        "## D-Pair Stats",
+        pn.pane.Markdown("## D-Pair Stats"),
         pn.widgets.Tabulator(dfD_stats, show_index=False),
 
-        "## D-Pair Usage",
+        pn.pane.Markdown("## D-Pair Usage"),
         pn.widgets.Tabulator(dfD_use, show_index=False)
     )
 ).servable()
+
+
 
 ```
 
