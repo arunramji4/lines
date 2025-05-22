@@ -39,9 +39,9 @@ rename_dict = {
     "total_shots_against_per60": "Shot Att Against/60",
     "total_goals_for_per60": "GF/60",
     "total_goals_against_per60": "GA/60",
-    "ShotAtt%": "Shot Att%",
+    "ShotAtt%": "Shot Att For%",
     "GF%": "GF%",
-    "SC%": "Scoring Chance%"
+    "SC%": "Scoring Chance For%"
 }
 
 rename_dictD = {
@@ -59,9 +59,9 @@ rename_dictD = {
     "total_shots_against_per60": "Shot Att Against/60",
     "total_goals_for_per60": "GF/60",
     "total_goals_against_per60": "GA/60",
-    "ShotAtt%": "Shot Att%",
+    "ShotAtt%": "Shot Att For%",
     "GF%": "GF%",
-    "SC%": "Scoring Chance%"
+    "SC%": "Scoring Chance For%"
 }
 
 dfF.rename(columns=rename_dict, inplace=True)
